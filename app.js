@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 const ejs = require('ejs')
 const app = express()
 
-const { check, validationResult } = require('express-validator/check');
+const { check, validationResult } = require('express-validator');
 const router = express.Router();
 const session = require('express-session');
 
