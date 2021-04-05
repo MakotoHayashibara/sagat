@@ -4,7 +4,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const ejs = require('ejs')
 const app = express()
-const port = 3000
+
 const { check, validationResult } = require('express-validator/check');
 const router = express.Router();
 const session = require('express-session');
@@ -475,7 +475,7 @@ app.get('/logout', (req, res) => {
 
 });
 
-
-
-
-  app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}.`);
+});
