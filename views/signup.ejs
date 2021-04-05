@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Progate</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <!--ロゴは後でいれる　-->
+          <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
+        </div>
+
+        <span class="fa fa-bars menu-icon"></span>
+
+
+      </div>
+    </header>
+
+    <div class="contact-form">
+      <div class="container">
+
+        <!-- <p>要素を3つ追加してください -->
+        <div class="panel">
+
+
+              <h2>新規ユーザー登録</h2>
+
+              <% if (errors.length > 0) { %>
+           <ul class="errors">
+             <!-- forEachメソッドを用いて、エラーメッセージ表示してください -->
+             <% errors.forEach( error => { %>
+             <li><%=error %></li>
+            <% }); %>
+           </ul>
+         <% } %>
+
+         <%  if (locals.isLoggedIn){  %>
+           <div class="contact-form">
+              <!-- <form>タグに送信先URLと送信方法を指定してください。 -->
+              <form action="/signup" method="post">
+                <!-- ユーザー名とメールアドレス、パスワードの<input>タグにname属性をつけてください。-->
+                <p>ユーザー名</p><input  type="text" name="Namae">
+
+                <p>パスワード</p><input type="password" name="password">
+
+          <div class="form-submit">
+                <button  class="new-button"  type="submit" value="登録する">
+
+                <a href="/signupresult">登録する</a>
+          </div>
+
+              </form>
+            </div>
+
+        <%    } else  { %>
+          <div class="contact-form">
+                  <p>今すぐログインしよう！</p>
+                  <p>ログインすると<br>新規ユーザーの登録ができます</p>
+
+                  <a class="btn" href="/login">ログイン</a>
+            </div>
+      <%  }%>
+
+
+            </div>
+
+
+    </div>
+
+  </body>

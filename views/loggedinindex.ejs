@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Progate</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-left">
+        <!--ロゴは後でいれる　-->
+        <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
+        <%-include('header'); %>
+
+
+
+       </ul>
+     </div>
+      </div>
+
+      <span class="fa fa-bars menu-icon"></span>
+
+      <div class="header-right">
+
+
+        <p><a href="/addthree">新しいレストランの情報を加える</a></p>
+
+        <p><a href="/addtwo">下にあるレストランに点数を加える</a></p>
+      </div>
+    </div>
+  </header>
+
+    <div class="logged-container" style="margin-top:50px;">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">エリア</th>
+                    <th scope="col">genre</th>
+                    <th scope="col">Food</th>
+                    <th scope="col">Decor</th>
+                    <th scope="col">Service</th>
+                    <th scope="col">Cost</th>
+                    <th scope="col">住所</th>
+                    <th scope="col">電話</th>
+                    <th scope="col">コメント</th>
+                </tr>
+            </thead>
+            <tbody>
+            <% for(let i in content){ %>
+            <tr>
+                <% let obj = content[i]; %>
+                <th>
+                    <%= obj.Name %>
+                </th>
+                <th>
+                    <%= obj.エリア %>
+                </th>
+                <th>
+                    <%= obj.genre %>
+                </th>
+                <th>
+                    <%= obj.food %>
+                </th>
+                <th>
+                    <%= obj.decor %>
+                </th>
+                <th>
+                    <%= obj.service %>
+                </th>
+                <th>
+                    <%= obj.cost %>
+                </th>
+                <th>
+                    <%= obj.住所 %>
+                </th>
+                <th>
+                    <%= obj.電話 %>
+                </th>
+                <th>
+                    <%= obj.コメント %>
+                </th>
+
+
+
+                <td><a
+<%  if (locals.isLoggedIn){  %>
+                  href="/delete/<%= obj.Name %>"
+              <%  } else { %>
+                
+            <%    } %>
+                  >削除(ログイン時のみ可)
+                  </a></td>
+
+
+            </tr>
+            <% } %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

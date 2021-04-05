@@ -1,0 +1,65 @@
+<html　lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Progate</title>
+    <link rel="stylesheet" href="stylesheet.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="/send_url.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <%-include('header'); %>
+
+          <!--ロゴは後でいれる　-->
+          <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
+        </div>
+
+        <span class="fa fa-bars menu-icon"></span>
+
+
+      </div>
+    </header>
+
+    <div class="contact-form">
+      <div class="container">
+        <h3 class="section-title">新しいレストランの情報を入力して下さい。</h3>
+        <h3 class="section-title">０−２５点で、最高が２５点。</h3><!-- <p>要素を3つ追加してください -->
+
+<%  if (locals.isLoggedIn){  %>
+
+
+
+      <form action="/addthreeresult" method="post">
+        <p>レストラン名</p><input  type="text" name="Name"　  size="24"><br>
+        <p>エリア</p><input  type="text" name="エリア"  size="24"><br>
+        <p>ジャンル</p><input  type="text" name="genre" value="" size="24"><br>
+
+        <p>住所</p><input  type="text" name="住所" value="" size="24"><br>
+        <p>電話</p><input  type="text" name="電話" value="" size="24"><br>
+
+
+        <p>コメント</p><input type="text" name="コメント" value="" size="24"><br>
+
+
+
+        <button type="submit" class="new-button" >入力</button>
+
+
+      </form>
+
+    <%  } else {  %>
+      <div class="contact-form">
+              <p>今すぐログインしよう！</p>
+              <p>ログインすると<br>新しいレストランの登録ができます</p>
+
+              <a class="btn" href="/login">ログイン</a>
+        </div>
+  <%  } %>
+
+      </div>
+
+    </div>
+
+  </body>

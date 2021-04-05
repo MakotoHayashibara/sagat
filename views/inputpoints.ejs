@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Progate</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <!--ロゴは後でいれる　-->
+          <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
+        </div>
+
+        <span class="fa fa-bars menu-icon"></span>
+
+
+      </div>
+    </header>
+
+    <div class="logged-container" style="margin-top:50px;">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Name</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+            <% for(let i in content){ %>
+            <tr>
+                <% let obj = content[i]; %>
+                <th>
+                    <%= obj.Name %>
+                </th>
+                
+
+            </tr>
+            <% } %>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="contact-form2">
+      <div class="container">
+        <h3 class="section-title">レストランの点数を入力して下さい。</h3>
+        <h3 class="section-title">0-25点で、最高が２５点</h3>
+        <!-- <p>要素を3つ追加してください -->
+        <div class="fourlessons">
+
+          <div class="inputgroup">
+          <p>食事</p>
+        <!-- <input>要素を追加してください -->
+          <input class="point-input" type="text" name="user_id" value="" size="24">
+          </div>
+        </div>
+
+        <div class="fourlessons">
+
+          <div class="inputgroup">
+          <p>雰囲気</p>
+        <!-- <input>要素を追加してください -->
+          <input class="point-input" type="text" name="user_id" value="" size="24">
+          </div>
+        </div>
+
+        <div class="fourlessons">
+
+          <div class="inputgroup">
+          <p>サービス</p>
+        <!-- <input>要素を追加してください -->
+          <input class="point-input" type="text" name="user_id" value="" size="24">
+          </div>
+        </div>
+
+        <div class="fourlessons">
+
+          <div class="inputgroup">
+          <p>値段</p>
+        <!-- <input>要素を追加してください -->
+          <input class="point-input" type="text" name="user_id" value="" size="24">
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+
+    </div>
+
+  </body>

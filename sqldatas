@@ -1,0 +1,118 @@
+-- MySQL dump 10.13  Distrib 5.7.32, for osx10.14 (x86_64)
+--
+-- Host: localhost    Database: restaurant
+-- ------------------------------------------------------
+-- Server version	5.7.32
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `guide`
+--
+
+DROP TABLE IF EXISTS `guide`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `guide` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` text,
+  `Genre` text,
+  `Food` text,
+  `Decor` text,
+  `Service` text,
+  `Cost` text,
+  `住所` text,
+  `エリア` text,
+  `電話` text,
+  `コメント` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=98 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `guide`
+--
+
+LOCK TABLES `guide` WRITE;
+/*!40000 ALTER TABLE `guide` DISABLE KEYS */;
+INSERT INTO `guide` VALUES (66,'弁天山美家古寿司','寿司','23','19','20','19','','浅草','','伝統の江戸前寿司でたぶん日本一。お店は清潔だが、内装は普通の地方のお寿司屋のよう。席が限られるので予約必須。サービスは真面目な感じで、場所柄キャバ嬢とIT起業家みたいなタイプをあまり見ないのもいい。'),(81,'中国飯店　六本木','中華',NULL,NULL,NULL,NULL,'','六本木','',' 老舗で味に安定感はあるが、値段は高め。 '),(82,'㐂寿司','寿司',NULL,NULL,NULL,NULL,'','人形町','','美家古よりは若干劣るが、高級寿司でとても美味しい。サービスも優しい感じ。店内は和風の鄙びた感じで趣がある。客層も悪くない。'),(83,'アントニオ　南青山','イタリアン',NULL,NULL,NULL,NULL,'東京都港区南青山7-3-6 南青山HYビル 1F','南青山',' 050-5868-4405 ','老舗のイタリアンで素材を活かしたシンプルな味でとても美味しい。店内は落ち着いたオシャレな感じで、サービスもフレンドリー。地下鉄の駅からはやや歩くのでバスが良い。'),(84,'L\'as','フレンチ',NULL,NULL,NULL,NULL,'','表参道','','モダン創作フレンチでコスパよく美味しい。ショーマンシップもあり楽しい。サービスもフレンドリーで店内もオシャレで活気があるが、２人予約だとテーブルとカウンターを選べないのが玉に瑕。'),(87,'叙々苑　游玄亭 西麻布','焼き肉',NULL,NULL,NULL,NULL,'東京都港区西麻布3-24-18 叙々苑ビル','西麻布',' 03-3796-8989','高いが質の良い肉で外れなく美味しい。サービスも愛想がよく早い。内装は普通の少し良い焼肉店といった感じ。'),(88,'三幸園','焼き肉',NULL,NULL,NULL,NULL,'東京都港区麻布十番1-8-7','麻布十番','03-3585-6306','麻布十番の老舗の高級焼き肉。遊玄亭の方が若干美味しいが、その分コストは安い。店内は個室はなく活気のある感じ。サービスは悪くないが、質問にはあまり答えてくれないので淡々と食事をするのが吉。'),(89,'竹葉亭','うなぎ',NULL,NULL,NULL,NULL,'','銀座','','老舗でうなぎは安定的に美味しい。内装、サービスとも古き良き昭和という感じで良い。');
+/*!40000 ALTER TABLE `guide` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `subguide`
+--
+
+DROP TABLE IF EXISTS `subguide`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `subguide` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` text,
+  `Genre` text,
+  `Food` text,
+  `Decor` text,
+  `Service` text,
+  `Cost` text,
+  `住所` text,
+  `エリア` text,
+  `電話` text,
+  `コメント` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=93 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `subguide`
+--
+
+LOCK TABLES `subguide` WRITE;
+/*!40000 ALTER TABLE `subguide` DISABLE KEYS */;
+INSERT INTO `subguide` VALUES (72,'グルガオン',NULL,'20','20','21','17',NULL,NULL,NULL,NULL),(73,'弁天山美家古寿司',NULL,'24','19','20','23',NULL,NULL,NULL,NULL),(74,NULL,NULL,'22','21','22','23',NULL,NULL,NULL,NULL),(75,'中国飯店　六本木',NULL,'21','22','21','23',NULL,NULL,NULL,NULL),(76,'中国飯店　六本木',NULL,'22','22','23','24',NULL,NULL,NULL,NULL),(77,'㐂寿司',NULL,'22','22','21','24',NULL,NULL,NULL,NULL),(78,'アントニオ　南青山',NULL,'23','23','22','20',NULL,NULL,NULL,NULL),(79,'L\'as',NULL,'20','22','19','18',NULL,NULL,NULL,NULL),(80,'慶華飯店',NULL,'21','14','16','9',NULL,NULL,NULL,NULL),(81,'山東',NULL,'20','14','15','9',NULL,NULL,NULL,NULL),(82,'叙々苑　游玄亭 西麻布',NULL,'22','18','21','23',NULL,NULL,NULL,NULL),(83,'三幸園',NULL,'20','15','17','19',NULL,NULL,NULL,NULL),(84,'竹葉亭',NULL,'22','19','21','20',NULL,NULL,NULL,NULL),(85,'神田きくかわ 日比谷店',NULL,'20','20','20','20',NULL,NULL,NULL,NULL),(86,'神田きくかわ 日比谷店',NULL,'19','21','20','21',NULL,NULL,NULL,'昭和な雰囲気で良い。'),(87,'L\'as',NULL,'20','20','19','19',NULL,NULL,NULL,''),(92,'L\'as',NULL,'22','22','18','17',NULL,NULL,NULL,'');
+/*!40000 ALTER TABLE `subguide` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `Namae` text,
+  `password` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (14,'あなご','$2b$10$WG6.f3h3u4dAgfmMPThO8.ywB1IMkjWG4lPmLA7SsSQeXQIeyOysm'),(15,'わさび','$2b$10$Q5KypyciJaQj3k8qYFjEbOOq.WQQ/uKEqALt1JiIt6Bl/43AXJ5D2'),(16,'にんじゃわんこ','$2b$10$jhlbqG68uHVo7TCdlRr5YOrHtPfiprV26ob5BxCTC9FCDlkTgOgs6'),(17,'おすし','$2b$10$bYkuQsAhZB/gBSJjcN4I.ONtT6FCmwyoLcUy/xTRu87Zoi0sFkb4W');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-03-17 14:23:56

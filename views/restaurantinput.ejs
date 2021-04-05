@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Progate</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <!--ロゴは後でいれる　-->
+          <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
+        </div>
+
+        <span class="fa fa-bars menu-icon"></span>
+        <div class="header-right">
+
+          <a href="#">ログアウト</a>
+
+        </div>
+
+
+      </div>
+    </header>
+
+    <div class="contact-form">
+      <div class="container">
+        <h3 class="section-title">リストから既存のレストランを選ぶか、新規のレストランを入力してください</h3>
+        <!-- <p>要素を3つ追加してください -->
+
+
+
+
+    <label>既存レストラン</label>
+    <select>
+        <% for (const i in content){ %>
+          <% let obj = content[i]; %>
+            <option value="<%= obj.Name %>"> <%= obj.Name %> </option>
+        <% } %>
+    </select>
+
+    <div class="message-wrapper">
+   <div class="messagecontainer">
+     <label>新規レストラン</label>
+     <span class="btn message" href="/newrestaurantregister/">新規入力</span>
+
+   </div>
+
+ </div>
+
+
+
+      </div>
+
+    </div>
+
+  </body>

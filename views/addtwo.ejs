@@ -1,0 +1,192 @@
+<html　lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Progate</title>
+    <link rel="stylesheet" href="stylesheet.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="/send_url.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <%-include('header'); %>
+
+          <!--ロゴは後でいれる　-->
+          <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
+        </div>
+
+        <span class="fa fa-bars menu-icon"></span>
+
+
+      </div>
+    </header>
+
+
+    <div class="contact-form">
+      <div class="container">
+        <h3 class="section-title">新しいレストランの情報を入力して下さい。</h3>
+        <h3 class="section-title">０−２５点で、最高が２５点。</h3><!-- <p>要素を3つ追加してください -->
+
+<%  if (locals.isLoggedIn){  %>
+
+
+      <form action="/top" method="post">
+
+        <select name="Name" value="" size="24">
+            <% for (const i in content){ %>
+              <% let obj = content[i]; %>
+                <option value="<%= obj.Name %>"> <%= obj.Name %> </option>
+            <% } %>
+        </select>
+
+
+
+
+        <p>食事</p><select  name="Food" value="" size="24">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+
+        </select>
+        <p>雰囲気</p><select   name="Decor" value="" size="24">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+
+        </select>
+
+        <p>サービス</p><select   name="Service" value="" size="24">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+
+            </select>
+
+            <p>値段</p><select   name="Cost" value="" size="24">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+
+
+            </select>
+
+            <p>コメント</p>
+
+
+            <input   type="text" name="コメント" value="" size="24"><br>
+
+
+              <div class="form-submit">
+
+        <button type="submit" class="new-button" >入力</button>
+
+      </div>
+      </form>
+
+<% } else { %>
+  <div class="contact-form">
+          <p>今すぐログインしよう！</p>
+          <p>ログインすると<br>ポイントの入力ができます</p>
+
+          <a class="btn" href="/login">ログイン</a>
+    </div>
+
+<% } %>
+
+
+
+
+      </div>
+
+    </div>
+
+  </body>
