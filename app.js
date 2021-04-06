@@ -31,10 +31,10 @@ const mysql = require('mysql')
 
 const con = mysql.createConnection({
   host: 'us-cdbr-east-03.cleardb.com',
-  user: 'b73806200832a3',
-  password: 'dd444796',
+  user: 'b3123f1d5c52d0',
+  password: '84c51861',
 
-  database: 'heroku_2c32a132c89fa6c'
+  database: 'heroku_407c0131cdf47a5'
 });
 
 
