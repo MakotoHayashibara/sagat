@@ -9,7 +9,7 @@ const { check, validationResult } = require('express-validator');
 const router = express.Router();
 const session = require('express-session');
 
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 
 
