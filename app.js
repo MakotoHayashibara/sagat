@@ -34,7 +34,15 @@ const con = mysql.createConnection({
   user: 'bd9aafdef23513',
   password: '8b81982b',
 
-  database: 'heroku_9e1070bc3dce2e5?'
+  database: 'heroku_9e1070bc3dce2e5'
+});
+
+const con = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'izushi26',
+  port: '3306',
+  database: 'restaurant'
 });
 
 app.use(
