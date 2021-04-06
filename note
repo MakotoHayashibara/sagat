@@ -1,0 +1,7 @@
+const con = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'izushi26',
+  port: '3306',
+  database: 'restaurant'
+});

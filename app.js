@@ -31,19 +31,13 @@ const mysql = require('mysql')
 
 const con = mysql.createConnection({
   host: 'us-cdbr-east-03.cleardb.com',
-  user: 'bd9aafdef23513',
-  password: '8b81982b',
+  user: 'b9b48668f9911c',
+  password: '2e16ee4a',
 
-  database: 'heroku_9e1070bc3dce2e5'
+  database: 'heroku_5ba742221f07a8b'
 });
 
-const con = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'izushi26',
-  port: '3306',
-  database: 'restaurant'
-});
+
 
 app.use(
   session({
