@@ -30,11 +30,11 @@ const mysql = require('mysql')
 
 
 const con = mysql.createConnection({
-  host: 'us-cdbr-east-03.cleardb.com',
-  user: 'b3123f1d5c52d0',
-  password: '84c51861',
+  host: 'X',
+  user: 'X',
+  password: 'X',
 
-  database: 'heroku_407c0131cdf47a5'
+  database: 'X'
 });
 
 
